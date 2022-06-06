@@ -17,7 +17,7 @@ def updateTextFile(fileName,originalString,replaceString):
             with open(fileName,mode="a+") as file:
                 file.seek(0)
                 content=file.read()
-                content=content.replace(originalString.lower(),replaceString)
+                content=content.replace(originalString,replaceString)
                 file.seek(0)
                 file.truncate()
                 file.write(content)
